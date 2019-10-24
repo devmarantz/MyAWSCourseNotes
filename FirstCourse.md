@@ -288,4 +288,10 @@ AWS Best Practices:
   - Amazon gives you options of different OS's, and instances that you can use.
 - Once your instance is running, you can open your MobaXTerm
 
-Note:  If you are running Mac or Linux we don't need MobaXTerm because they already have an SSH client installed
+Note:  If you are running Mac or Linux we don't need MobaXTerm because they already have an SSH client installed 
+
+Connect with Telnet:
+Use the command "telnet [IP Address] [Port]"
+
+Note:
+Can't connect when you're in the Genuent Office because they block SSH.
