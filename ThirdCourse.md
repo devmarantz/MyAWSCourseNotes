@@ -148,7 +148,7 @@ AWS Best Practices:
         - Click Launch and Select your relevant key pair
         - Your instance will now launch though it will take some time for it to instantiate the first time
 
-  Creating an Instance:
+#### Creating an Instance:
   - Before creating an instance we need to create a key pair
   - Amazon gives you options of different OS's, and instances that you can use.
 - Once your instance is running, you can open your MobaXTerm
@@ -160,3 +160,18 @@ Use the command "telnet [IP Address] [Port]"
 
 Note:
 Can't connect when you're in the Genuent Office because they block SSH.
+
+#### Connect to Instance
+Now that we've created our instance, let's connect to it.
+
+IP Address Section of Instance:
+- Private IP
+  - Won't be able to connect directly
+  - Need a Virtual Private Network
+- Public
+  - In our case it's IPv4
+  - We will use this to connect 
+
+1. Open up iTerm/ MobaXTerm
+  - telnet [IP Address] [Port]
+
