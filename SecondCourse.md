@@ -70,7 +70,7 @@ If you want to use a service that ONLY AWS offers, then go with AWS.  However yo
 
 #### Understand the Virtualization Layer!
 
-![2.3-CloudIsADataCenter](./images/2.3-CloudIsADataCenter.PNG)
+![2.3-CloudIsADataCenter](./images/2.3-CloudIsADataCenter.png)
 
 - Behind the scenes, Cloud is only a data center
 - Virtualization is one of the most important aspects of IaaS
