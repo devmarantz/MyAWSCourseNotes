@@ -319,3 +319,7 @@ As soon as a machine sends a packet:
       - Check the Destination Port
   2. The data transfer takes place if passed
 
+#### Firewall Final
+- If there are no rules on a firewall it will block every request
+- Firewalls block thousands of attacks everyday. 
+
