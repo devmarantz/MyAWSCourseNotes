@@ -310,3 +310,12 @@ Since the Source is specified in the firewall rules, the hacker will be blocked
 #### Example:
 In this example since the ports are different (as you can see in the TCP/IP Packet) this request will be blocked
 ![Firewall Block](./images/3.9-FirewallBlock.png)
+- Notice that the Source IP matches: 10.0.5.57
+- But the Destination Port does not match: 80
+
+As soon as a machine sends a packet:
+  1. It Goes to the Firewall (SYN Packet)
+      - Checks source IP
+      - Check the Destination Port
+  2. The data transfer takes place if passed
+
