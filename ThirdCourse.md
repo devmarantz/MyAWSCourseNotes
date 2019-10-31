@@ -305,3 +305,8 @@ Since the Source is specified in the firewall rules, the hacker will be blocked
     - Source IP and PORT
     - Destination IP and PORT
   - Based on these coniditions the Firewall will determine if it will allow the transaction
+    - In the backend it goes into more detail (This is just a high-level overview)
+
+#### Example:
+In this example since the ports are different (as you can see in the TCP/IP Packet) this request will be blocked
+![Firewall Block](./images/3.9-FirewallBlock.png)
