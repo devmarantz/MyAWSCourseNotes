@@ -10,7 +10,7 @@ Start Date: 10/10/19
 ---
 ---
 ### Lesson 1 - Introduction to Cloud Computing
-Before AWS:
+#### Before AWS:
 
 1.
     - Sys Admins had to use a data center and hosting provider
@@ -20,16 +20,16 @@ Before AWS:
       - Power backup, cooling, internet connectivity, etc...
       - Which led to how much you would pay
 
-CONS of Data Center and Hosting Providers:
+#### CONS of Data Center and Hosting Providers:
 - If there is an issue, you have to physically go to the server and reboot it.
 - If you want to scale a Data Center up you need to install a new RAM onto the server
   - With a hosting provider, you need to tell them to do it,  delayed by however fast they are
 
-Power of Cloud Computing:
+#### Power of Cloud Computing:
 - Able to change the server capacity within an minute!
   - EX: You have a promotion and need to handle more people going to your server.
 
-3 Important Characteristics of CC (Cloud Computing):
+#### 3 Important Characteristics of CC (Cloud Computing):
 1. On-Demand & Self Served
     - Launch anytime without manual intervention
 2. Elasticity
@@ -37,13 +37,13 @@ Power of Cloud Computing:
 3. Measured Service
     - Pay what you use
 
-Another CSP (Cloud Service Provider):
+#### Another CSP (Cloud Service Provider):
 - DigitalOcean
 
 ---
 ---
 ### Lesson 2 - Cloud Computing Models
-3 Types of CC Models:
+#### 3 Types of CC Models:
 1. SaaS (Software)
     - EX: Google Docs, Office 365
 2. PaaS (Platform)
@@ -52,35 +52,36 @@ Another CSP (Cloud Service Provider):
 3. IaaS (Infrastructure)
     - EX: AWS, Linode, Digital Ocean
 
-Important Notes when choosing a CSP:
+#### Important Notes when choosing a CSP:
 - Choose the best option according to your requirements
 
-AWS provides:
+#### AWS provides:
 - Saas, PaaS, and IaaS
 If you use AWS for everything you will lose a lot of money.  
 - Sometimes Digital Ocean or Linode is a good alternative
 
-EX: If you want to use a service that ONLY AWS offers, then go with AWS.  However you can launch your servers on Digital Ocean.  Some people have done a Hybrid Cloud Platform by using an AWS SaaS and a Digital Ocean Server.
+#### EX: 
+If you want to use a service that ONLY AWS offers, then go with AWS.  However you can launch your servers on Digital Ocean.  Some people have done a Hybrid Cloud Platform by using an AWS SaaS and a Digital Ocean Server.
 
 ---
 ---
 ### Lesson 3 - Architecture of Cloud Environments
 "Cloud is not on Clouds" 
 
-Understand the Virtualization Layer!
+#### Understand the Virtualization Layer!
 
 ![2.3-CloudIsADataCenter](./images/2.3-CloudIsADataCenter.PNG)
 
 - Behind the scenes, Cloud is only a data center
 - Virtualization is one of the most important aspects of IaaS
 
-Virtualization allows:
+#### Virtualization allows:
 - On Demand & Self-Serviced
 - Elasticity
 - Pay Per Use
 - Run multiple OS on a single hardware
 
-Virtualization Softwares:
+#### Virtualization Softwares:
 - VMware Workstation / vSphere
 - KVM
 - XEN
@@ -95,10 +96,10 @@ It will help you to understand the Virtualization layer first before moving onto
 ### Lesson 4 - On-Demand & Self Service - Characteristics of Cloud
 
 "Cloud is not unlimited"
-On Demand Resources:
+#### On Demand Resources:
 - A person can provision resources without the need to interact with a human
 
-Challenges:
+#### Challenges:
 ![Challenges](./images/2.4-Challenges.png)
 - Though cloud limits are high, there is still a limit, you will not always be able to launch an instance
 - You are limited to the hardware that you have
@@ -108,14 +109,14 @@ Challenges:
 ### Lesson 5 - Characteristic of CSP - Elasticity
 "Rubber band"
 
-Elastiity:
+#### Elastiity:
 - Allows you to add and remove capacity whenever it is needed
   - EX: If you have a promotion and are expecting more people
 
-Capacity:
+#### Capacity:
 - Generally refers to processing & memory
 
-Scalability:
+#### Scalability:
 ![Scalability](./images/2.5-Scalability.png)
 - Vertical
   - Adding or removing resources for existing servers
@@ -132,16 +133,16 @@ Scalability:
   - Cons:
     - Usually you can't scale databases (masters) horizontally
 
-Auto-Scalability:
-AWS Provides an auto-scaling configuration
+#### Auto-Scalability:
+- AWS Provides an auto-scaling configuration
 
-EX:  
+#### EX:  
 - When a CPU Load > 70% scale up by two more servers
 - When a CPU Load < 30% sclae down by two servers
 
 ---
 ---
 ### Lesson 6 - Elasticity Part 2
-Challenges:
+#### Challenges:
 - If you want to Vertically Scale, you have to shut down a server first before scaling up
 - This challenge is still true with AWS, you cannot vertically scale a server unless you turn it off first
