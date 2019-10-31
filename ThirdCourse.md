@@ -254,3 +254,54 @@ IP Address Section of Instance:
           - Press Y
           - Then press Enter
     - Refresh page to check if the new message is there
+
+---
+---
+### Lesson 8  -  Document - Installation Commands
+Amazon has come up with the new Amazon Linux 2 OS.
+
+If you are using Amazon Linux 2, the commands to install nginx will slightly change. Here are the new updated commands:
+
+    amazon-linux-extras install nginx1.12
+    systemctl start nginx
+
+---
+---
+### Lesson 9  -  Understanding Basics of Firewall
+There are good guys and bad guys on the internet.
+Because of this we need to protect our servers.
+This is why we have firewalls
+
+![Firewall Overview](./images/3.9-FirewallOverview.png)
+
+#### Firewalls
+- Firewalls allows us to 
+  - Allow Trusted users
+  - Block hackers
+
+#### Example
+In this example, we have 5 services running:
+- Apache, SSH, FTP, SMTP, and MySQL
+
+Each of these Services also have a Port affiliated with them.
+
+In the firewall rule(bottom of image) it states the firewall will only allow a connection from:
+- Port 22
+- With the Source 10.0.5.57
+- WIth a request for SSH
+
+![Firewall Rule](./images/3.9-FirewallRule.png)
+
+In this example you can see the Authorized User (IP:10.0.5.57) and the Hacker (IP:112.20.50.60)
+
+![Firewall Example](./images/3.9-FirewallExample.png)
+Since the Source is specified in the firewall rules, the hacker will be blocked
+
+#### 3 Way Handshake
+- A 3 way handshake needs to happen before you can start accessing data
+- The TCPI/IP Header Fields are looked at first in the "Packet" that is sent
+- What does the firewall evaluate the TCP/IP Header Fields?
+  - The most important things that it looks at are the:
+    - Source IP and PORT
+    - Destination IP and PORT
+  - Based on these coniditions the Firewall will determine if it will allow the transaction
