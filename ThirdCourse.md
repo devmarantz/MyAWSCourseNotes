@@ -93,10 +93,10 @@ AWS Best Practices:
   2. Create a New User
   3. Select Password Options
   4. Set Permissions
-  4. b) Add tags (optional)
+      - b) Add tags (optional)
   5. Review
   6. Finish
-    - Given a link to send to a person
+      - Given a link to send to a person
 
   Warning:
   - IAM Users do not have the MFA Option By Default
@@ -130,23 +130,23 @@ AWS Best Practices:
   2. Select Your Region
   3. Go to the EC2 Dashboard
   4. Go to Instances
-    - Create a Keypair
-    - Launch Instance
-      - Select an OS
-        - We choose Amazon Linux
-      - Select an Instance
-        - How much CPU/Ram do you need?
-          - WARNING! If you don't choose a free tier, you will be charged.
-      - Configure Instance Details (Default)
-      - Add Storage (Default)
-      - Add Tags (Default)
-      - Configure Security Group
-        - Make a Security Group Name
-        - This case will be SSH TCP on Port 22
-        -   Source 0.0.0.0/0 Means that anybody can access it through Port 22
-      - Review and Launch
-        - Click Launch and Select your relevant key pair
-        - Your instance will now launch though it will take some time for it to instantiate the first time
+      - Create a Keypair
+      - Launch Instance
+        - Select an OS
+          - We choose Amazon Linux
+        - Select an Instance
+          - How much CPU/Ram do you need?
+            - WARNING! If you don't choose a free tier, you will be charged.
+        - Configure Instance Details (Default)
+        - Add Storage (Default)
+        - Add Tags (Default)
+        - Configure Security Group
+          - Make a Security Group Name
+          - This case will be SSH TCP on Port 22
+          -   Source 0.0.0.0/0 Means that anybody can access it through Port 22
+        - Review and Launch
+          - Click Launch and Select your relevant key pair
+          - Your instance will now launch though it will take some time for it to instantiate the first time
 
 #### Creating an Instance:
   - Before creating an instance we need to create a key pair
@@ -173,71 +173,71 @@ IP Address Section of Instance:
   - We will use this to connect 
 
 1. Open up iTerm/ MobaXTerm
-  - telnet [IP] [PORT]
-  - In order to quit hit CTRL+]
+    - telnet [IP] [PORT]
+    - In order to quit hit CTRL+]
 
 2. Connect Via SSH
-  - Use command:  ssh ec2-user@[IP]
-  - You should get "Permission Denied (publickey)"
-  - I get when at home:
+    - Use command:  ssh ec2-user@[IP]
+    - You should get "Permission Denied (publickey)"
+    - I get when at home:
     The authenticity of host '[IP] ([IP])' can't be established.
     ECDSA key fingerprint is [FINGERPRINT]
 
 3. Add key to desktop for SSH
-  1. Put Key .pem on desktop
-  2. Go into Desktop
-    - cd ~/Desktop
-  3. Change permission 
-    - chmod 640 [KEY FILE NAME]
-    - I had to change the permissions manually
-  4. Run ssh command with key
-    - ssh -i ~/Desktop/[KEY FILE NAME] ec2-user@[IP]
-  5. Now that you're in go into the root account
-    - sudo su -
+    1. Put Key .pem on desktop
+    2. Go into Desktop
+        - cd ~/Desktop
+    3. Change permission 
+        - chmod 640 [KEY FILE NAME]
+        - I had to change the permissions manually
+    4. Run ssh command with key
+        - ssh -i ~/Desktop/[KEY FILE NAME] ec2-user@[IP]
+    5. Now that you're in go into the root account
+        - sudo su -
 
 4. Download nginx
-  - This is a web server similar to Apache
-  1. Command:
-    - yum -y install nginx
-  2. Check status:
-    - service nginx status
-  3. Start server:
-    - service nginx start
-  4. Check whic port it is running on:
-    - netstat -ntlp
-    - Check where it says nginx and make sure the state is listening
-    - Then check the port
-    - In my case it is [NGINX PORT]
+    - This is a web server similar to Apache
+    1. Command:
+        - yum -y install nginx
+    2. Check status:
+        - service nginx status
+    3. Start server:
+        - service nginx start
+    4. Check whic port it is running on:
+        - netstat -ntlp
+        - Check where it says nginx and make sure the state is listening
+        - Then check the port
+        - In my case it is [NGINX PORT]
 
 5. Try to connect via telnet
-  - If you try to connect via telnet to the port it will not be running
-  - Check the Security Group "view inbound rules" in the EC2 Management Console
-    - You should see that there is only one rule for SSH
+    - If you try to connect via telnet to the port it will not be running
+    - Check the Security Group "view inbound rules" in the EC2 Management Console
+      - You should see that there is only one rule for SSH
 
 6. Add a new inbound rule
-  1. Click Security Group name
-  2. Click "inbound" thne "edit" 
-  3. Add rule
-    - Include Port
-    - Change name to "Web Server" in the description
-  4. Now you should be able to connect to the Web Server
+    1. Click Security Group name
+    2. Click "inbound" thne "edit" 
+    3. Add rule
+        - Include Port
+        - Change name to "Web Server" in the description
+    4. Now you should be able to connect to the Web Server
 
 7. Copy IP Address and open it in a web browser
-  - You should see "Welcome to nginx..."
+    - You should see "Welcome to nginx..."
 
 8. We can edit the html page
-  - In the SSH root window go into the file that holds the html files
-    - cd /usr/share/nginx/html
-  - The web page is being rendered from the index.html file
-  - View file
-    - nano index.html
-  - Clear file
-    - echo > index.html
-  - Write new file
-    - For now we will write
-      - "Welcome to my websites..."
-    - Use CRTL+X to exit
-      - It will ask you to save
-        - Press Y
-        - Then press Enter
-  - Refresh page to check if the new message is there
+    - In the SSH root window go into the file that holds the html files
+      - cd /usr/share/nginx/html
+    - The web page is being rendered from the index.html file
+    - View file
+      - nano index.html
+    - Clear file
+      - echo > index.html
+    - Write new file
+      - For now we will write
+        - "Welcome to my websites..."
+      - Use CRTL+X to exit
+        - It will ask you to save
+          - Press Y
+          - Then press Enter
+    - Refresh page to check if the new message is there
