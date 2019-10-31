@@ -5,10 +5,11 @@ Start Date: 10/10/19
 ---
 ---
 
-## Lesson Notes
+# Lesson Notes
+## Course 2 - Fundamentals of Cloud Computing Platform
 ---
-### Course 2 - Fundamentals of Cloud Computing Platform
-#### Lesson 1 - Introduction to Cloud Computing
+---
+### Lesson 1 - Introduction to Cloud Computing
 Before AWS:
 
 1.
@@ -39,6 +40,8 @@ Power of Cloud Computing:
 Another CSP (Cloud Service Provider):
 - DigitalOcean
 
+---
+---
 ### Lesson 2 - Cloud Computing Models
 3 Types of CC Models:
 1. SaaS (Software)
@@ -59,6 +62,8 @@ If you use AWS for everything you will lose a lot of money.
 
 EX: If you want to use a service that ONLY AWS offers, then go with AWS.  However you can launch your servers on Digital Ocean.  Some people have done a Hybrid Cloud Platform by using an AWS SaaS and a Digital Ocean Server.
 
+---
+---
 ### Lesson 3 - Architecture of Cloud Environments
 "Cloud is not on Clouds" 
 
@@ -85,7 +90,10 @@ With these Virtualization Softwares you can choose how much memory each VM has d
 
 It will help you to understand the Virtualization layer first before moving onto AWS.
 
+---
+---
 ### Lesson 4 - On-Demand & Self Service - Characteristics of Cloud
+
 "Cloud is not unlimited"
 On Demand Resources:
 - A person can provision resources without the need to interact with a human
@@ -95,6 +103,8 @@ Challenges:
 - Though cloud limits are high, there is still a limit, you will not always be able to launch an instance
 - You are limited to the hardware that you have
 
+---
+---
 ### Lesson 5 - Characteristic of CSP - Elasticity
 "Rubber band"
 
@@ -129,6 +139,8 @@ EX:
 - When a CPU Load > 70% scale up by two more servers
 - When a CPU Load < 30% sclae down by two servers
 
+---
+---
 ### Lesson 6 - Elasticity Part 2
 Challenges:
 - If you want to Vertically Scale, you have to shut down a server first before scaling up
