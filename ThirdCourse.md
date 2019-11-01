@@ -338,4 +338,14 @@ As soon as a machine sends a packet:
     - Subnet can contain hundreds of instances
   - Instead of the Instance level where Security Groups are
 - All subnets in VPC must be associated with NACL
+  - AWS will create a new NACL when you make a VPC by default
   - By default, network ACL contains full allow inbound and outbound
+
+#### Example:
+![Use Case 1](./images/3.10-useCase1.png)
+- NACL allows you to block an IP at the NACL level.
+- You can't block only one IP on the Security Group
+
+#### Use NACL
+1. Go to VPC Console
+
