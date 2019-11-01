@@ -298,6 +298,7 @@ In this example you can see the Authorized User (IP:10.0.5.57) and the Hacker (I
 Since the Source is specified in the firewall rules, the hacker will be blocked
 
 #### 3 Way Handshake
+![Three Way Handshake](./images/3.9-ThreeWayHandshake.png)
 - A 3 way handshake needs to happen before you can start accessing data
 - The TCPI/IP Header Fields are looked at first in the "Packet" that is sent
 - What does the firewall evaluate the TCP/IP Header Fields?
@@ -308,7 +309,9 @@ Since the Source is specified in the firewall rules, the hacker will be blocked
     - In the backend it goes into more detail (This is just a high-level overview)
 
 #### Example:
-In this example since the ports are different (as you can see in the TCP/IP Packet) this request will be blocked
+In this example since the ports are different (as you can see in the TCP/IP Packet)
+
+This request will be blocked!!
 ![Firewall Block](./images/3.9-FirewallBlock.png)
 - Notice that the Source IP matches: 10.0.5.57
 - But the Destination Port does not match: 80
@@ -323,3 +326,6 @@ As soon as a machine sends a packet:
 - If there are no rules on a firewall it will block every request
 - Firewalls block thousands of attacks everyday. 
 
+---
+---
+### Lesson 10  -  Network ACL
