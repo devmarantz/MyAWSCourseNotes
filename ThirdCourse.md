@@ -348,4 +348,18 @@ As soon as a machine sends a packet:
 
 #### Use NACL
 1. Go to VPC Console
-
+2. Select a VPC
+  - In my case, I only have one
+3. Go to Network ACLs
+  - Example shows Default Yes and Subnets:
+  ![NACL Example](./images/3.10-NACLExample.png)
+4. Check Inbound and Outbound Rules
+  - You should have two rules each
+  ![Rules](./images/3.10-rules.png)
+  - The lower the # of the rules, the higher the priority
+    - Rule #99 is higher priority than #100
+    ![Rule99](./images/3.10-rule99.png)
+    - Rule #101 is lower priority than #100
+    ![Rule101](./images/3.10-rule101.png)
+  - If you create a custom NACL it comes default with all traffic denied
+  ![Denied](./images/3.10-customNACL.png)
