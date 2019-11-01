@@ -329,3 +329,13 @@ As soon as a machine sends a packet:
 ---
 ---
 ### Lesson 10  -  Network ACL
+"Multiple Layers of Defense"
+#### Network ACL Overview:
+- Stateless in Nature
+- Operate at the Subnet level
+  - Subnet vs Instance
+    ![Subnet Vs. Instance](./images/3.10-subnetVsInstance.png)
+    - Subnet can contain hundreds of instances
+  - Instead of the Instance level where Security Groups are
+- All subnets in VPC must be associated with NACL
+  - By default, network ACL contains full allow inbound and outbound
