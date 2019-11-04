@@ -475,5 +475,12 @@ Start Date: 10/10/19
   - If you are using an IS, make sure that you backup your data to central storage
     - Store it in something like an S3
 
+#### Connect to Instance store
+  - Telnet to Port 22
+  - ssh to the Instance
+  ![Instance Connect](./images/3.12-instanceConnect.png)
+  - Go to root
 
-
+        sudo su -
+  - df -h
+  ![Instance Connect 2](./images/3.12-instanceConnect2.png)
