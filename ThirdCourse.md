@@ -409,4 +409,5 @@ As soon as a machine sends a packet:
 #### Block vs Object Storage
 ##### Differences
 ![Block vs Object](./images/3.11-blockVsObject.png)
-
+  - Object Storage can be called via API
+    - On a HTTP(S) based interface
