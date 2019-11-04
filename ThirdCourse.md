@@ -483,4 +483,20 @@ Start Date: 10/10/19
 
         sudo su -
   - df -h
-  ![Instance Connect 2](./images/3.12-instanceConnect2.png)
+    ![Instance Connect 2](./images/3.12-instanceConnect2.png)
+    - Notice the ephemera
+      - This means temporary
+  - Create a file
+    ![Instance Connect 3](./images/3.12-instanceConnect3.png) 
+  - Reboot IS
+    - Notice that you can only reboot or terminate the instance store
+    ![Instance Connect 4](./images/3.12-instanceConnect4.png) 
+
+#### Important Point
+##### Before stopping instanes make sure that they are not Instance Stores because you will lose all the data!
+  - If you manually halt an IS it will say that it's terminated
+    ![Instance Terminated](./images/3.12-instanceTerminated.png) 
+
+
+
+    
