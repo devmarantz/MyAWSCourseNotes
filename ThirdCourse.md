@@ -417,3 +417,50 @@ Start Date: 10/10/19
 ---
 ---
 ### Lesson 12 - Instance Store Volumes
+"temporary data"
+#### Instance Store
+  - AWS Instance store provides a temporary block storage volumes for use wuth EC2 instances
+    - Usually when you reboot an instance, the data in a system is lost
+  - Storage is located on the disks that are physically attached to the host computer
+  - Size on instance store varies depending on the instance
+  - Instance store is temporary storage
+    - Our first instance was an ebs device type which is a permanent storage, a proper hard disk 
+#### Example
+  ![Instance Store](./images/3.12-instanceStore.png)
+  - Using 4 VMs belonging to 4 customers
+  - We are using the storage device on a host server
+  - Problem, if the storage device files, then all 4 VMs will fail.  NOT OPTIMAL
+
+#### Launch an Instance Store
+  1. Go to EC2 Instances
+  2. Launch a new instance
+  3. Choose Community AMIs
+  4. Select "Root Device Type" = Instance Store 
+  5. We'll choose the first one:
+    ![Instance1](./images/3.12-instance1.png)
+  6. Select m1.small type
+    ![Instance2](./images/3.12-instance2.png)
+    - Notice that you can't select any of the EBS only instane storages
+    - Our m1.small instance has 1.7GB RAM and 160GBs storage size
+    - This instance is free, this is why people use instance stores
+  7. Configure instance details
+    - Use default
+  8. Add storage
+    - Click "add new volume"
+    - Choose "instance store 0"
+    - Notice that you can't modify the size because this is determined by the instance type you choose
+    ![Instance3](./images/3.12-instance3.png)
+    ![Instance4](./images/3.12-instance4.png)
+  9. Review and launch!
+    ![Instance5](./images/3.12-instance5.png)
+    ![Instance6](./images/3.12-instance6.png)
+    - Notice the warning, but you should be fine
+    - Select the default key pair
+    - Acknowledge the warning
+  10. Go to instance and rename "instance store"
+    ![Instance7](./images/3.12-instance7.png)
+    ![Instance8](./images/3.12-instance8.png)
+    - Notice that the "Root device type is an instance store
+    ![Instance9](./images/3.12-instance9.png)
+
+
