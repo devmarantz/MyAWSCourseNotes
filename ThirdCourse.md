@@ -363,3 +363,50 @@ As soon as a machine sends a packet:
     ![Rule101](./images/3.10-rule101.png)
   - If you create a custom NACL it comes default with all traffic denied
   ![Denied](./images/3.10-customNACL.png)
+
+---
+---
+### Lesson 11 -  Introduction to Block vs Object Storage Mechanism
+#### Block Storage
+  - Data is stored in "blocks"
+  - Data stored is read or written a whole block at a time
+  - Most file systems are block devices
+  - Every block has an address
+    - An app can be called via SCSI call using address
+  - No storage side meta-data associated with the block other than the address
+  - A block has no description and no owner
+
+##### View Block Size
+  - Go into root of EC2 instance:
+
+        sudo su -
+  -  View block size:
+
+          blockdev --getbsz /dev/sda
+  - List devices
+
+        lsblk
+    -  In my case I get an "xvda"
+
+##### Example
+- Based on the block size of 4096:
+  - Each block is 4096 based blocks
+- If you have data of 8KB (8096) 
+  - You will have two blocks
+- If you have data of 12KB 
+  - You will have three blocks
+
+#### Object Storage
+- Data storage architecture that manages data as objects as opposed to blocks of storage
+- Defined as data (a file) along with all it's meta-data as an object
+- Object is given an ID which is calculated from the contents (object and meta-data)
+  - An app can call an object based off the unique Object ID
+
+##### Meta Data
+- By default AWS adds the Content-Type meta data to an object
+  - Ex: image/png
+
+#### Block vs Object Storage
+##### Differences
+![Block vs Object](./images/3.11-blockVsObject.png)
+
