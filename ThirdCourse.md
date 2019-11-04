@@ -418,7 +418,7 @@ Start Date: 10/10/19
 ---
 ### Lesson 12 - Instance Store Volumes
 "temporary data"
-#### Instance Store
+#### Instance Store (IS)
   - AWS Instance store provides a temporary block storage volumes for use wuth EC2 instances
     - Usually when you reboot an instance, the data in a system is lost
   - Storage is located on the disks that are physically attached to the host computer
@@ -462,5 +462,18 @@ Start Date: 10/10/19
     ![Instance8](./images/3.12-instance8.png)
     - Notice that the "Root device type is an instance store
     ![Instance9](./images/3.12-instance9.png)
+
+#### Important Points
+  - Data in IS is lost when:
+    - The underlying disk drive fails
+    - The instance stops
+    - The instance terminates
+  - IS are included in the cost of EC2 instance
+    - They are cost effective!
+    - Since we already have our EC2 instance we get a free Instance store 
+      - With our m1.small we get a free 160GBs
+  - If you are using an IS, make sure that you backup your data to central storage
+    - Store it in something like an S3
+
 
 
