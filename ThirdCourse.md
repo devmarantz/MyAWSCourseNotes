@@ -499,4 +499,31 @@ Start Date: 10/10/19
 
 
 
+
     
+---
+---
+### Lesson 13  -  Introduction to Elastic Block Store
+#### Elastic Block Store (EBS)
+  - "Portal Hard Disk"
+  -  AWS EBS is a persistent block storage volumes for use with EC2
+      - Unlike Instance Stores, the data stored here is saved even when EC2 instances are stopped or restarted
+  - Each EBS is designed for 99.999% availability
+  - Automatically replicated within its availability zone
+  - EBS is elastic in nature  
+    - Supports dynamic increase in capacity and performance
+    - Can change instance types of live volumes
+
+#### Diagram
+  ![EBS](./images/3.13-EBS.png)
+  - There are 4 EC2 Instances (orange)
+    - Without EBS, the EC2 Instances would have to store data directly on the server
+  - EBS is similar to a network attached storage (right)
+    - There are 3 hard disk drives (black)
+    - Mounted via network
+    - Devices are replicated to each other
+      - Allows data to be backed up
+
+#### Warnings
+- Even though EBS data is backed up, you should still back up the data yourself
+
