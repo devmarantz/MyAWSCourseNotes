@@ -518,12 +518,47 @@ Start Date: 10/10/19
   ![EBS](./images/3.13-EBS.png)
   - There are 4 EC2 Instances (orange)
     - Without EBS, the EC2 Instances would have to store data directly on the server
+    
   - EBS is similar to a network attached storage (right)
     - There are 3 hard disk drives (black)
     - Mounted via network
     - Devices are replicated to each other
       - Allows data to be backed up
 
+#### Compute !== Storage
+##### Compute
+  - EC2 is regarded a a compute based service
+  - Compute generally refers to Memory & CPU
+##### Storage
+  - Includes EBS, Instance Stores, etc.
+
+---
+#### Practical
+  1. Go to your instance
+
+  2. Notice the Root Device Type = ebs
+
+  3. Click Root Device: /dev/xvda
+
+  4. Click Volume ID: (EBS ID)
+  ![EBS Example](./images/3.13-EBSExample.png)
+
+  5. It should take you to the Volume where you can view the
+      - Size, Volume Type, # of IOPS
+
+  6. Click Actions and modify volume
+      - Note: remember that EBS are elastic
+        - This is where you change that stuff
+    ![EBS Example 2](./images/3.13-EBSExample2.png)
+
+  7. Here we can change the size and volume type
+      - Size
+    ![EBS Example 3](./images/3.13-EBSExample3.png)
+
+      - Volume Type
+    ![EBS Example 4](./images/3.13-EBSExample4.png)
+
+---
 #### Warnings
-- Even though EBS data is backed up, you should still back up the data yourself
+  - Even though EBS data is backed up, you should still back up the data yourself
 
