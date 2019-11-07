@@ -518,7 +518,7 @@ Start Date: 10/10/19
   ![EBS](./images/3.13-EBS.png)
   - There are 4 EC2 Instances (orange)
     - Without EBS, the EC2 Instances would have to store data directly on the server
-    
+
   - EBS is similar to a network attached storage (right)
     - There are 3 hard disk drives (black)
     - Mounted via network
@@ -561,4 +561,26 @@ Start Date: 10/10/19
 ---
 #### Warnings
   - Even though EBS data is backed up, you should still back up the data yourself
+
+---
+---
+### Lesson 14  -  Features of EBS - Portability
+#### EBS Review
+- "Elastic Block Store"
+- Based on Network attached storage
+- Two types of storage
+  - Instance Store
+    - Storage is directly on host where VM's reside
+  - EBS
+    - In a cluster that are mounted to EC2 Instances
+- Easily detached and provide portability
+  - Because it is attached via network
+  - Similar to a hard drive connected via usb
+![EBS Review](./images/3.14-EBSReview.png)
+
+#### EBS Portability
+- "Portal Hard Disk"
+
+
+
 
