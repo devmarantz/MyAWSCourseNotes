@@ -598,3 +598,19 @@ Start Date: 10/10/19
   ![volumeAvailable](./images/3.14-volumeAvailable.png)
   9. Name the volume "portable"
   ![volumeName](./images/3.14-volumeName.png)
+  10. Connect to EC2 Instance
+
+          ssh -i [token route] ec2-user@[IP]
+  ![instanceConnect](./images/3.14-instanceConnect.png)
+  11. Go to Root
+
+          sudo su - 
+  ![instanceRoot](./images/3.14-instanceRoot.png)
+  12. Notice it is attached to XVDA
+  - Also notice that xvda is listed as the root and block device
+  ![instanceXvda](./images/3.14-instanceXvda.png)
+  ![instanceDevice](./images/3.14-instanceDevice.png)
+  13. Attach a volume
+  ![volumeAttach](./images/3.14-volumeAttach.png)
+
+
