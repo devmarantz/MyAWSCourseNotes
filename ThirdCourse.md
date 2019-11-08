@@ -566,21 +566,35 @@ Start Date: 10/10/19
 ---
 ### Lesson 14  -  Features of EBS - Portability
 #### EBS Review
-- "Elastic Block Store"
-- Based on Network attached storage
-- Two types of storage
-  - Instance Store
-    - Storage is directly on host where VM's reside
-  - EBS
-    - In a cluster that are mounted to EC2 Instances
-- Easily detached and provide portability
-  - Because it is attached via network
-  - Similar to a hard drive connected via usb
-![EBS Review](./images/3.14-EBSReview.png)
+  - "Elastic Block Store"
+  - Based on Network attached storage
+  - Two types of storage
+    - Instance Store
+      - Storage is directly on host where VM's reside
+    - EBS
+      - In a cluster that are mounted to EC2 Instances
+  - Easily detached and provide portability
+    - Because it is attached via network
+    - Similar to a hard drive connected via usb
+  ![EBS Review](./images/3.14-EBSReview.png)
 
 #### EBS Portability
-- "Portal Hard Disk"
+  - "Portal Hard Disk"
 
-
-
-
+---
+#### Practical 
+  1. Go to EC2 Instances 
+  2. Go to Volumes
+  3. Create a new Volume
+  ![Volume](./images/3.14-volume.png)
+  4. Set size to 5 GBs
+  5. Check Availability Zone for the instance that you're going to connect with
+  ![volumeInstance](./images/3.14-instance.png)
+  6. Set the appropriate availability zone
+  ![volumeCreate](./images/3.14-volumeCreate.png)
+  7. Click Create Volume
+  8. Notice that state says "available"
+      - This means that it is ready to be connected to an EC2 Instance
+  ![volumeAvailable](./images/3.14-volumeAvailable.png)
+  9. Name the volume "portable"
+  ![volumeName](./images/3.14-volumeName.png)
