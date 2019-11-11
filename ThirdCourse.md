@@ -657,5 +657,33 @@ Start Date: 10/10/19
             umount /marantz
             df -h
       ![instanceMove](./images/3.14-instanceMove.png)
+  22. Detach volume from the instance and wait for it to be available
+      ![instanceMove2](./images/3.14-instanceMove2.png)
+      ![instanceMove3](./images/3.14-instanceMove3.png)
+  23. Now that it's available we can attach to the new EC2 Instance
+      ![instanceMove4](./images/3.14-instanceMove4.png)
+      - Confirm that the sdf block device is there
+        - DISCLAIMER: The instance has to have the same availability zone
+      ![instanceMove5](./images/3.14-instanceMove5.png)
+      - Notice that is no longer in the old instance
+      ![instanceMove6](./images/3.14-instanceMove6.png)
+  24. Check to see if file is in new instance
+
+          ssh -i ~[key route] ec2-user@[IP]
+          sudo su -
+      ![instanceMove7](./images/3.14-instanceMove7.png)
+
+          lsblk
+          mkdir /marantz02
+          mount /dev/xvdf /marantz02
+          df -h
+      ![instanceMove8](./images/3.14-instanceMove8.png)
+
+          cd /marantz02
+          ls
+          cat kplabs.txt
+      ![instanceMove9](./images/3.14-instanceMove9.png)
+
+
 
 
