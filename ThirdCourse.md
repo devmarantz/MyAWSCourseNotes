@@ -607,10 +607,55 @@ Start Date: 10/10/19
           sudo su - 
   ![instanceRoot](./images/3.14-instanceRoot.png)
   12. Notice it is attached to XVDA
+      
   - Also notice that xvda is listed as the root and block device
   ![instanceXvda](./images/3.14-instanceXvda.png)
   ![instanceDevice](./images/3.14-instanceDevice.png)
   13. Attach a volume
   ![volumeAttach](./images/3.14-volumeAttach.png)
+  14. Select Appropriate Instance
+  ![volumeAttach2](./images/3.14-volumeAttach2.png)
+  15. Go back to instance and confirm that a new block device "sdf" is attached
+  ![instanceSDF](./images/3.14-instanceSDF.png)
+
+      - Notice that now there is an xvdf
+      ![instanceXVDF](./images/3.14-instanceXVDF.png)
+  16. Format xvdf disk with a ext4 system
+
+          mkfs.ext4 /dev/xvdf
+      - Creates a filesystem inside the xvdf hard disk drive
+      ![instanceXVDF2](./images/3.14-instanceXVDF2.png)
+  17. Connect to a specific directory
+      - Create new directory
+
+            mkdir /marantz
+      - Connect harddisk drive to the folder
+
+            mount /dev/xvdf /marantz
+      - ensure /dev/xvdf is connected to your folder
+      ![instanceXVDF3](./images/3.14-instanceXVDF3.png)
+  18. View the folder and list contents
+      - Go in folder and list
+
+            cd /marantz
+            ls
+      - by default it will say lost+found
+      ![instanceXVDF4](./images/3.14-instanceXVDF4.png)
+  19. Create a text file in the folder
+
+          touch marantz.txt
+          echo "This is EBS Portability example" > marantz.txt
+          cat marantz.txt
+      ![instanceXVDF5](./images/3.14-instanceXVDF5.png)
+  20. Create a second instance
+      ![secondInstance](./images/3.14-secondInstance.png)
+  21. Disconnect from your first instance and connect to your second instance
+      - Step out of folder, unmount it, and confirm it's not in the file system
+        - Notive that xvdf is not longer listed in the directory
+
+            cd ..
+            umount /marantz
+            df -h
+      ![instanceMove](./images/3.14-instanceMove.png)
 
 
