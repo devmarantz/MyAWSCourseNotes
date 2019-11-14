@@ -684,6 +684,28 @@ Start Date: 10/10/19
           cat kplabs.txt
       ![instanceMove9](./images/3.14-instanceMove9.png)
 
+---
+---
+### Lesson 15  -  Introduction to ELB
+"Managed Services are the best
+#### Elastic Load Balancer (ELB)
+  - Businesses like to have backups just in case a server goes down
+  - ELB takes a part in this architecture
+  - Single point of failure should be avoided
+    - In this image the cirle would be the load balancer
+    - If the single load balancer goes down, the whole website will go down
+      ![Single Point](./images/3.15-singlePoint.png)
+  - Two Load balancers are better and was more common in business architecture before ELB
+    - Even if one load balancer goes, the other one can be used
+      ![Two Points](./images/3.15-twoPoints.png)
+  - Instead of running load balancers on the EC2 Instances, we utilize ELB which AWS provides
+    - Scale automatically depending on the load
+    - Managed by AWS
+      - AWS also provides Application Load Balancers and Network Load Balancers
+      ![ELB](./images/3.15-ELB.png)
 
-
-
+#### Intro to ELB
+  - ALlows us to distribute incoming traffic to multiple EC2 Instances
+  - ELB can handle rapid change in network traffic patterns
+  - Since it's a managed service, clients don't have to worry about high availability related aspects
+    
