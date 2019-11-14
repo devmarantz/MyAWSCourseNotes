@@ -704,8 +704,12 @@ Start Date: 10/10/19
       - AWS also provides Application Load Balancers and Network Load Balancers
       ![ELB](./images/3.15-ELB.png)
 
-#### Intro to ELB
+#### Intro to ELB Overview
   - ALlows us to distribute incoming traffic to multiple EC2 Instances
   - ELB can handle rapid change in network traffic patterns
   - Since it's a managed service, clients don't have to worry about high availability related aspects
     
+---
+#### Practical
+ 1. Have two instances both installed with nginx
+      ![practical](./images/3.15-practical.png)
