@@ -190,7 +190,9 @@ Start Date: 10/10/19
       - In order to quit hit CTRL+]
 
   2. Connect Via SSH
-      - Use command:  ssh ec2-user@[IP]
+      - Use command:  
+      
+            ssh ec2-user@[IP]
       - You should get "Permission Denied (publickey)"
       - I get when at home:
       The authenticity of host '[IP] ([IP])' can't be established.
@@ -199,25 +201,33 @@ Start Date: 10/10/19
   3. Add key to desktop for SSH
       1. Put Key .pem on desktop
       2. Go into Desktop
-          - cd ~/Desktop
+
+              cd ~/Desktop
       3. Change permission 
-          - chmod 640 [KEY FILE NAME]
+          
+              chmod 640 [KEY FILE NAME]
           - I had to change the permissions manually
       4. Run ssh command with key
-          - ssh -i ~/Desktop/[KEY FILE NAME] ec2-user@[IP]
+          
+              ssh -i ~/Desktop/[KEY FILE NAME] ec2-user@[IP]
       5. Now that you're in go into the root account
-          - sudo su -
+          
+              sudo su -
 
   4. Download nginx
       - This is a web server similar to Apache
       1. Command:
-          - yum -y install nginx
+          
+              yum -y install nginx
       2. Check status:
-          - service nginx status
+          
+              service nginx status
       3. Start server:
-          - service nginx start
+          
+              service nginx start
       4. Check whic port it is running on:
-          - netstat -ntlp
+          
+              -netstat -ntlp
           - Check where it says nginx and make sure the state is listening
           - Then check the port
           - In my case it is [NGINX PORT]
@@ -225,14 +235,18 @@ Start Date: 10/10/19
   5. Try to connect via telnet
       - If you try to connect via telnet to the port it will not be running
       - Check the Security Group "view inbound rules" in the EC2 Management Console
+      ![inbound rules](./images/3.7-practical.png)
         - You should see that there is only one rule for SSH
 
   6. Add a new inbound rule
+      ![inbound rules2](./images/3.7-practical2.png)
+      ![inbound rules3](./images/3.7-practical3.png)
       1. Click Security Group name
-      2. Click "inbound" thne "edit" 
+      2. Click "inbound" then "edit" 
       3. Add rule
           - Include Port
           - Change name to "Web Server" in the description
+
       4. Now you should be able to connect to the Web Server
 
   7. Copy IP Address and open it in a web browser
@@ -240,12 +254,15 @@ Start Date: 10/10/19
 
   8. We can edit the html page
       - In the SSH root window go into the file that holds the html files
-        - cd /usr/share/nginx/html
+        
+            cd /usr/share/nginx/html
       - The web page is being rendered from the index.html file
       - View file
-        - nano index.html
+        
+            nano index.html
       - Clear file
-        - echo > index.html
+            
+            echo > index.html
       - Write new file
         - For now we will write
           - "Welcome to my websites..."
@@ -712,4 +729,36 @@ Start Date: 10/10/19
 ---
 #### Practical
  1. Have two instances both installed with nginx
+      - Nginx is not installed on the second instance so I need to do that
       ![practical](./images/3.15-practical.png)
+      - To check if both of your instances have nginx installed and running, copy the IP and go to it on a browser.
+        - You should see for both IPs:
+      ![practical2](./images/3.15-practical2.png)
+  2. Go to the Load Balancer section
+      ![practical3](./images/3.15-practical3.png)
+      - If you go to the load balancer, you will see that both of the instances are connected to the load balancer:
+      - Also notice that both of the instances status are "inService"
+      ![practical4](./images/3.15-practical4.png)
+  3. Copy the DNS name in the ELB Description:
+      ![practical5](./images/3.15-practical5.png)
+      - Copy it and put it in the browser.
+        - The first time you will see one server:
+      ![practical6](./images/3.15-practical6.png)
+        - When you refresh it will show the other server:
+      ![practical7](./images/3.15-practical7.png)
+        - This will flip flop back and forth. Sending requests to both of the servers
+  4. Let's test if one server goes down:
+      - Stop one of the instances:
+      ![practical8](./images/3.15-practical8.png)
+      - Once it is stopped:
+      ![practical9](./images/3.15-practical9.png)
+      - If you refresh, the link will only stay on one server
+
+#### Overview
+  - For testing purposes, we showed server one and server two to be different
+  - Typically the servers will be showing the same thing
+  - If we go back to ELB menu we can see that one of the instances status is "OutOfService":
+      ![practical10](./images/3.15-practical10.png)
+
+
+
