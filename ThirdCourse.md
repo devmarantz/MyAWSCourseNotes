@@ -795,3 +795,50 @@ Start Date: 10/10/19
       ![practical11](./images/3.16-practical11.png)
         - For some reason mine is not working
 
+---
+---
+### Lesson 17 - Resource Level Tags
+"Tag Strategies"
+
+#### Overview
+  - If we go over to our Instane Tags, notice that we only have one tag
+      ![overview](./images/3.17-overview.png)
+    - This is not typical for an enterprise level
+      - For enterprises, good tags are extremely important
+
+#### Example
+  - If a CFO wants to know how much resources a certain team is using and seeing how much each team is being charged
+  - good tags will make it possible for the CFO to see who is working on what
+  - An example of some tags that some teams and use is:
+      ![example](./images/3.17-example.png)
+
+#### Practical 
+ 1. Add a tag to one of your instances with: 
+ 
+        team : payments
+      ![practical1](./images/3.17-practical1.png)
+ 2. Add a tag to another instances with: 
+ 
+        team : devops
+      ![practical2](./images/3.17-practical2.png)
+  - If you have proper biling setup, you can look into how much money it has cost for resources linked to a specific tag
+    - To do this, you need to enable the billing to include tagging related information
+  3. Go to My Billing Dashboard
+      ![practical3](./images/3.17-practical3.png)
+  4. Go to Preferences and enable Receive Billing Reports
+      ![practical4](./images/3.17-practical4.png)
+      - Now we need the S3 bucket name
+  5. Go to S3 Services, preferably in new tab
+      ![practical5](./images/3.17-practical5.png)
+  6. Create new Bucket
+      - Give it a name and create the bucket
+      ![practical6](./images/3.17-practical6.png)
+  7. Add bucket to billing preferences and click sample policy
+      ![practical7](./images/3.17-practical7.png)
+      - Copy the policy
+      ![practical8](./images/3.17-practical8.png)
+  8. Put Policy in the S3 Bucket
+      - Go to bucket properties
+      ![practical9](./images/3.17-practical9.png)
+
+
