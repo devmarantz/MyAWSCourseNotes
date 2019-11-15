@@ -840,5 +840,19 @@ Start Date: 10/10/19
   8. Put Policy in the S3 Bucket
       - Go to bucket properties
       ![practical9](./images/3.17-practical9.png)
+      - Go to Permissions -> Bucket Policy
+        - Paste the Policy in the editor and save
+      ![practical10](./images/3.17-practical10.png)
+      - Verify the bucket
+      ![practical11](./images/3.17-practical11.png)
+  9. Manage report tags
+      ![practical12](./images/3.17-practical12.png)
+        - Activate the tags that you want to track
+      ![practical13](./images/3.17-practical13.png)
+  10. Go back to preferences and save them
+      ![practical14](./images/3.17-practical14.png)
+  - Now whenever data is updated on the S3 you will get information about the tags
 
+#### Overview
+  - With effective tags, you can easily be able to target and view exactly what teams are costing and using
 
