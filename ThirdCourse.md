@@ -779,3 +779,19 @@ Start Date: 10/10/19
       - If you don't have instances, create 2 new ones
         - Install nginx on both servers
           - Refer to previous tutorial Lesson 7
+      - You need to make sure that you have 2 running instances first
+      ![practical6](./images/3.16-practical6.png)
+  7. Review and Create
+  8. Go to Load balancer
+      ![practical7](./images/3.16-practical7.png)
+  9. Notice that if you have two instances that are OutOfService, this means that they are still registering
+      - Wait until it says inService
+      ![practical8](./images/3.16-practical8.png)
+  10. Go to Load Balancer Description and copy the DNS Name and put it in a browser
+      ![practical9](./images/3.16-practical9.png)
+  11. The first time it should go to one server
+      ![practical10](./images/3.16-practical10.png)
+        - The Next time it should go to the other server
+      ![practical11](./images/3.16-practical11.png)
+        - For some reason mine is not working
+
