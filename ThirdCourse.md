@@ -760,5 +760,22 @@ Start Date: 10/10/19
   - If we go back to ELB menu we can see that one of the instances status is "OutOfService":
       ![practical10](./images/3.15-practical10.png)
 
-
-
+---
+---
+### Lesson 16  -  Creating our first Elastic Load Balancer
+#### Practical 
+  1. Go to Load balancer page and Create Load Balancer 
+      ![practical1](./images/3.16-practical1.png)
+  2. There are multiple options but for now we want the simple "Classic Load Balancer"
+      ![practical2](./images/3.16-practical2.png)
+  3. Give your load balancer a name and ensure that the Load Balancer and Instance Port is 80 (where your nginx port is)
+      ![practical3](./images/3.16-practical3.png)
+  4. Select the default Security Group
+      ![practical4](./images/3.16-practical4.png)
+  5. Ensure that the Ping Path is looking at the index.html
+      - If you the file you want to look at is not index.html, change it
+      ![practical5](./images/3.16-practical5.png)
+  6. Select two instances that you want to connect to
+      - If you don't have instances, create 2 new ones
+        - Install nginx on both servers
+          - Refer to previous tutorial Lesson 7
