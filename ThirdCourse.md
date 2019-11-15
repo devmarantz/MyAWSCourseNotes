@@ -856,3 +856,25 @@ Start Date: 10/10/19
 #### Overview
   - With effective tags, you can easily be able to target and view exactly what teams are costing and using
 
+---
+---
+### Lesson 18 - Detailed Billing Report with Tags
+#### Overview
+  - Verify that you have confirmed the Detailed Billing reports with resources and tags
+    - NOTICE that this is now a legacy feature, and this is not part of the current AWS
+      ![overview](./images/3.18-overview.png)
+  - This is something that a Solutions Architect should know!!
+
+#### Practical
+  1. Go to the S3 Bucket that you creaded
+      ![practical1](./images/3.18-practical1.png)
+  2. Notice that AWS has given you reports for various months
+      ![practical2](./images/3.18-practical2.png)
+  3. Download and view the notes
+      - Notice that there is a LOT of information
+      ![practical3](./images/3.18-practical3.png)
+      - The last column has the tags that you created
+      ![practical4](./images/3.18-practical4.png)
+      ![practical5](./images/3.18-practical5.png)
+  
+
