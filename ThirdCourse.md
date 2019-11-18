@@ -877,4 +877,37 @@ Start Date: 10/10/19
       ![practical4](./images/3.18-practical4.png)
       ![practical5](./images/3.18-practical5.png)
   
+---
+---
+### Lesson 19 - Auto Scaling
+"Scaling to Traffic Patterns"
 
+#### Overview
+  - Scalability is the ability of a system to change in size depending on the needs
+  - Infrastructure should scale to support changing traffic patterns
+  - Ideal architecture should have less servers when traffic is less and vice-versa
+
+#### Example
+  ![example](./images/3.19-example.png)
+  - If you have high traffic during the day and less during the night then you should scale down during these times
+  - For example if you have 5 servers during the day, then it would be a waste of these resources if you have these running the whole day
+
+---
+#### Auto Scaling 
+  - Auto scaling allows us to scale up and down the EC2 instances depeneding on conditions that are defined by the solutions architect
+
+##### How is it achieved?
+- Based off the average load of the instance
+  ![autoScaling1](./images/3.19-autoScaling1.png)
+  - Simple Scaling Policy
+  - Base instance level: 2 servers
+  - Scalable
+
+##### Check you autoscaling
+  1. Go to Auto Scaling Groups
+  ![autoScaling2](./images/3.19-autoScaling2.png)
+  2. Notice
+      - Minimum Servers is 1
+      - Maximum Servers are 3
+      - There are two scaling policies
+  ![autoScaling3](./images/3.19-autoScaling3.png)
