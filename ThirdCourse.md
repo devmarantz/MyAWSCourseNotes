@@ -922,3 +922,40 @@ Start Date: 10/10/19
   ![autoScaling5](./images/3.19-autoScaling5.png)
       - We use these alarms alarms in conjunction with the scaling policies
 
+---
+---
+### Lesson 20 - Introduction to S3
+"Unlimited Storage"
+
+#### Overview
+  - AWS Simple Storage Service
+  - Benefits of S3
+    - No need to hire storage admins
+    - Don't have to invest in huge storage devices 
+    - Don't have to worry about security for the storage servers        
+
+#### Example
+  - Storage Capacity
+  ![example](./images/3.20-example.png)
+    - Everyday 200GB of logs are made
+      - What is the most effective way to handle this storage capacity
+    - Old Approach
+      - Buy huge storage devices
+      - Ensure high availability
+      - Hire storage admins
+      - Ensure security for storage users
+      ![example2](./images/3.20-example2.png)
+    - New Approach
+      - Create an AWS Account
+      - Upload all log files to AWS S3
+  - Some other options for storage
+    - Mediafire
+      - Cheap
+      - But doesn't have as many featues
+      ![mediaFire](./images/3.20-mediaFire.png)
+      
+
+
+
+
+
