@@ -887,6 +887,7 @@ Start Date: 10/10/19
   - Infrastructure should scale to support changing traffic patterns
   - Ideal architecture should have less servers when traffic is less and vice-versa
 
+
 #### Example
   ![example](./images/3.19-example.png)
   - If you have high traffic during the day and less during the night then you should scale down during these times
@@ -895,6 +896,7 @@ Start Date: 10/10/19
 ---
 #### Auto Scaling 
   - Auto scaling allows us to scale up and down the EC2 instances depeneding on conditions that are defined by the solutions architect
+  - If we define a minimum of 1 instance and one of those instances is terminated then another instance will take it's place
 
 ##### How is it achieved?
 - Based off the average load of the instance
@@ -911,3 +913,12 @@ Start Date: 10/10/19
       - Maximum Servers are 3
       - There are two scaling policies
   ![autoScaling3](./images/3.19-autoScaling3.png)
+  3. Go to CloudWatch service
+      - Go to Alarms
+      - Notice that he has two alarms
+  ![autoScaling4](./images/3.19-autoScaling4.png)
+      - One of the alarms will go off if the CPU Utilization is less than 25%
+      - THe other will alarm if the CPU Utilization is more than 70%
+  ![autoScaling5](./images/3.19-autoScaling5.png)
+      - We use these alarms alarms in conjunction with the scaling policies
+
