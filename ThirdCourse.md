@@ -953,9 +953,51 @@ Start Date: 10/10/19
       - Cheap
       - But doesn't have as many featues
       ![mediaFire](./images/3.20-mediaFire.png)
-      
 
+#### Intro
+  - AWS S3 is an object storage designed to store and retrieve any amount of data from anywhere
+  - Designed for 99.999999999% durability and 99.99% availability
+  - Comes preloaded with features
+      ![intro](./images/3.20-intro.png)
+    - This is what makes AWS S3 so powerful!!
 
+#### Terminology
 
+  ![terms](./images/3.20-terms.png)
+  - Two important terminologies
+    - Buckets (AWSLogs)
+    - Objects (openvpn sg.png)
 
+#### Practical
+  1. Go to S3 Services
+  ![practical1](./images/3.20-practical1.png)
+  2. Click into bucket to check what's inside
+  ![practical2](./images/3.20-practical2.png)
+  3. Go back to S3 Services and Create bucket
+      - Note that the bucket names are shared across everybody with an AWS account so not all names will be available
+      - In this case "test" is not available
+  ![practical3](./images/3.20-practical3.png)
+      - Select Name and Region then click Create
+  ![practical4](./images/3.20-practical4.png)
+  4. Go to your newly created Bucket
+    ![practical5](./images/3.20-practical5.png)
+  5. Click on upload then Add files
+    ![practical6](./images/3.20-practical6.png)
+      - In this case we'll add a txt file
+    ![practical7](./images/3.20-practical7.png)
+  6. Click on upload
+    ![practical8](./images/3.20-practical8.png)
+      - Notice that upload will start on the bottom
+    ![practical9](./images/3.20-practical9.png)
+      - And success once it is uploaded
+    ![practical10](./images/3.20-practical10.png)
+  7. Click inside file
+      - Notice the details included in the file
+    ![practical11](./images/3.20-practical11.png)
+  8. You can open the file and view it directly on the browser
+    ![practical12](./images/3.20-practical12.png)
+    ![practical13](./images/3.20-practical13.png)
 
+#### Reminder
+  - The bucket names have to unique
+    - Not the folders though
