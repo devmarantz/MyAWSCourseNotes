@@ -1001,3 +1001,24 @@ Start Date: 10/10/19
 #### Reminder
   - The bucket names have to unique
     - Not the folders though
+
+---
+---
+### Lesson 21 - S3 - Public Access Settings
+
+#### Overview
+  - You can release a public S3 bucket if you want to.
+
+#### Practical
+  1. Create a bucket
+  2. Put an image or something in it.
+  3. Now try to make it public in actions tab
+  ![public](./images/3.21-public.png)
+  4. Notice that it failed to make it public
+      - This is because there is a policy in the bucket that you need to change in the settings
+  ![publicError](./images/3.21-publicError.png)
+  5. Change permissions in "Public Access Settings"
+      - Deselect the three boxes, save, and confirm
+  ![makePublic](./images/3.21-makePublic.png)
+  6. Now when you try to make it public it will work!
+
