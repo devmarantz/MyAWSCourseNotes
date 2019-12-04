@@ -1022,3 +1022,6 @@ Start Date: 10/10/19
   ![makePublic](./images/3.21-makePublic.png)
   6. Now when you try to make it public it will work!
 
+---
+---
+### Lesson 22 - S3 Storage Classes
